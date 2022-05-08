@@ -1,23 +1,33 @@
-let chiffre = 47
+let total = 0;
 
-let nouvelleChaine = `Le chiffre attendu est : ${chiffre} degrés`;
+function addition(x) {
+  total += x;
+  return total;
+}
 
-console.log(nouvelleChaine);
+function soustraction(x) {
+  total -= x;
+  return total;
+}
 
-let string = "je suis une chaine de caractère";
-let number = 24;
-let boolean = true;
-let array = ["je", "suis", 24, false];
+function division(x) {
+  if (total === 0) {
+    return (total = x);
+  } else {
+    total /= x;
+    return total;
+  }
+}
 
-let object = {
-    prenom: "audrey",
-    age: 34,
-    ville: "Bordeaux",
-};
+function multiplication(x) {
+  if (total === 0) {
+    return (total = x);
+  } else {
+    total *= x;
+    return total;
+  }
+}
 
-console.log(typeof array);
-console.log(typeof number);
-
-
-
-
+function reset() {
+  total = 0;
+}
